@@ -20,8 +20,8 @@ namespace Haste.Messages
 {
     public class MessageBase
     {
-        public short Code;
+        protected short _code;
 
-        public DataObject Data;
+        protected DataObject _data;
     }
 }

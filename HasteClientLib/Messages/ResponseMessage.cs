@@ -22,13 +22,29 @@ namespace Haste.Messages
     {
         public ResponseMessage(short code, DataObject parameters)
         {
-            Code = code;
-            Data = parameters;
+            _code = code;
+            _data = parameters;
         }
 
         public override string ToString()
         {
-            return string.Format("ResponseMessage " + Code + " Parameters: " + Data.ToString());
+            return string.Format("ResponseMessage " + _code + " Parameters: " + _data.ToString());
+        }
+
+        public short Code
+        {
+            get
+            {
+                return _code;
+            }
+        }
+
+        public DataObject Data
+        {
+            get
+            {
+                return _data;
+            }
         }
     }
 }

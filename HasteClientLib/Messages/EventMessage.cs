@@ -24,8 +24,8 @@ namespace Haste.Messages
 
         public EventMessage(short code, DataObject parameters)
         {
-            Code = code;
-            Data = parameters;
+            code = code;
+            _data = parameters;
         }
 
         public EventMessage(short code, DataObject parameters, INetworkPeer peer, bool encrypt)
@@ -57,7 +57,7 @@ namespace Haste.Messages
 
         public override string ToString()
         {
-            return string.Format("Event " + Code + " : " + "Parameters: " + Data);
+            return string.Format("Event " + _code + " : " + "Parameters: " + _data);
         }
     }
 }
