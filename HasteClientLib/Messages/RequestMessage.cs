@@ -24,8 +24,8 @@ namespace Haste.Messages
 
         public RequestMessage(short code, DataObject parameters)
         {
-            Code = code;
-            Data = parameters;
+            this._code = code;
+            this._data = parameters;
         }
 
         public RequestMessage(short code, DataObject parameters, INetworkPeer peer, bool encrypt)
@@ -57,7 +57,7 @@ namespace Haste.Messages
 
         public override string ToString()
         {
-            return string.Format("RequestMessage " + Code + " Parameters: " + Data);
+            return string.Format("RequestMessage " + _code + " Parameters: " + _data);
         }
     }
 }
